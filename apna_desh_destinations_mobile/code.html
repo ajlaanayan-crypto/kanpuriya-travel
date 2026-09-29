@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Apna Desh - Destinations | Kanpuriya Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "background": "#fcf9f8",
+                        "on-secondary-container": "#785a1a",
+                        "inverse-surface": "#313030",
+                        "outline-variant": "#bfc8c7",
+                        "on-primary-fixed-variant": "#084f4d",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0eded",
+                        "tertiary": "#2c2d2a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-container": "#424340",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-fixed-dim": "#c8c6c3",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-primary-container": "#7ebab7",
+                        "on-surface": "#1c1b1b",
+                        "secondary": "#775a19",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed-dim": "#95d1ce",
+                        "on-surface-variant": "#3f4948",
+                        "secondary-container": "#fed488",
+                        "primary-fixed": "#b1eeea",
+                        "primary-container": "#004b49",
+                        "on-tertiary-container": "#b0afac",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#003331",
+                        "surface": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary-fixed": "#e4e2de",
+                        "surface-tint": "#2a6865",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-primary-fixed": "#00201f",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#95d1ce",
+                        "error": "#ba1a1a",
+                        "outline": "#707978",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "caption": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: linear-gradient(180deg, rgba(0,51,49,0) 0%, rgba(0,51,49,0.8) 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="w-full sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 h-16 px-margin-mobile flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-primary italic">Kanpuriya Travel</span>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary">search</button>
+<button class="material-symbols-outlined text-primary">menu</button>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<header class="px-margin-mobile pt-stack-md pb-stack-lg">
+<div class="mb-4">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest bg-secondary-container/30 px-3 py-1 rounded-full">Explore Apna Desh</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Asli India, <br/><span class="italic font-normal">VIP Style Mein.</span></h1>
+<p class="font-body-md text-on-surface-variant max-w-xs">Eiffel Tower dekh lo, par Banaras ka Assi Ghat toh dekha hi hai? Luxury destinations that don't need a passport.</p>
+</header>
+<!-- Category Scroll -->
+<section class="mb-stack-md">
+<div class="flex overflow-x-auto gap-4 px-margin-mobile no-scrollbar">
+<button class="flex-shrink-0 px-6 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md">All Spots</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline text-on-surface-variant rounded-full font-label-md text-label-md">Spiritual</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline text-on-surface-variant rounded-full font-label-md text-label-md">Royal Heritage</button>
+<button class="flex-shrink-0 px-6 py-2 border border-outline text-on-surface-variant rounded-full font-label-md text-label-md">Backwaters</button>
+</div>
+</section>
+<!-- Destination Cards - Vertical Stack for Mobile -->
+<section class="px-margin-mobile space-y-gutter pb-stack-lg">
+<!-- Varanasi -->
+<div class="relative rounded-xl overflow-hidden shadow-sm group">
+<div class="aspect-[4/5] w-full relative">
+<img class="object-cover w-full h-full" data-alt="A breathtaking cinematic wide shot of the Varanasi Ghats at twilight. Ancient stone steps lead down to the dark Ganges river where dozens of small floating candles drift. The scene is illuminated by the warm, golden glow of massive oil lamps held by priests performing the Aarti ceremony. Deep teal shadows and rich orange highlights create a premium, editorial travel magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdCtcNIng0xPI0MHvCdxr5zzNev7Yx_L4Tk-4zwBDdrsWtYpr8h2mdycpJ7CICt06M92CnNwfDvgx34DnfsWkWpy0y5bxmASbFJakcGuNHUzJTr6KmpOWdO4Jq1xfe8yJOL66PVkRiXbQ98Vb6rWq3Tuyo716C87x-lUVKC-zcvya4Ex7g4GJDa2HJeByKYftirtqBYkBBtvh9GVwqE86yiTMf0pTr0b2WW4Y9b6X_GATfUGWHLvkovfEUMmFlGjlCsPSvHNKZnI_J"/>
+<div class="absolute inset-0 luxury-gradient"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 font-label-md text-label-md rounded">₹14,999/-</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6 text-white w-full">
+<h3 class="font-headline-md text-headline-md mb-1">Varanasi: Mo-sh-ka Mode</h3>
+<p class="font-caption text-caption opacity-90 mb-3 uppercase tracking-tighter">Uttar Pradesh • 4 Nights</p>
+<div class="flex justify-between items-center">
+<p class="font-body-md text-sm italic">"Vibe check? Pure soul. Crowds? Maharaja handling."</p>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Kerala -->
+<div class="relative rounded-xl overflow-hidden shadow-sm group">
+<div class="aspect-[4/5] w-full relative">
+<img class="object-cover w-full h-full" data-alt="A luxurious wooden houseboat floating on the serene, emerald green backwaters of Kerala. The boat features ornate hand-carved details and white linen curtains fluttering in the breeze. Lush, vibrant green coconut palm trees line the banks under a soft, hazy tropical sun. The image has a high-end, sophisticated feel with professional color grading emphasizing teals and deep natural greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCz5z_M6DaIfr9IBajpvt7zrf5NNRS9jw9why32bjYjYXBaJmZClom6vz_jmnFQkivFjVwOeiFuH1LmutamJrfuEj4iGngidimKDEDuHjC4RLJ3t1wl3y7o5xZlKORUXzLFFf6JY2OJJuGDSffp-QuqUh5C846_3vKD3CGcGBQ3zsWWI7uKkJ_Wn3AlUcfPhaUL9XmPqRaixCqkSGkCHB_BLSp_RkmAEKGnKFze-3sw2kvYsKRzfKRQI9qiMtNZNy0HXaKEIppGyGg"/>
+<div class="absolute inset-0 luxury-gradient"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 font-label-md text-label-md rounded">₹22,500/-</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6 text-white w-full">
+<h3 class="font-headline-md text-headline-md mb-1">Kerala: Venice in Lungi</h3>
+<p class="font-caption text-caption opacity-90 mb-3 uppercase tracking-tighter">God's Own Country • 6 Nights</p>
+<div class="flex justify-between items-center">
+<p class="font-body-md text-sm italic">"Houseboat mein sukoon, baaki sab moh-maaya hai."</p>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rajasthan -->
+<div class="relative rounded-xl overflow-hidden shadow-sm group">
+<div class="aspect-[4/5] w-full relative">
+<img class="object-cover w-full h-full" data-alt="The grand facade of a Rajasthani palace, likely in Udaipur or Jaipur, during the golden hour. The intricate jaali work and sandstone carvings are lit by a brilliant orange sun. In the foreground, a peacock stands on a marble balcony. The sky is a gradient of soft pink and deep teal. The aesthetic is incredibly opulent, resembling a high-fashion editorial spread for a luxury concierge service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoEHP3WINEOEm782Z9pJzNVnLosYJY2EsWH520BWX8jDYXvJdt-MAseYODazIT9JYKixNpfI6-gYZVGCnr_8lbVQwMwZlaiDUJ_20daxLeNNnAKzQ2zRNaAFDnrq0hjsiHe93H3QkLkQs3rzkPi62ToNr9hztvKqFR-LnL7vRUE6nFDbzzkUyhtFIClQIeLM93lnCxI1DHlWL1K2cQBnkkoy1zE9-aISMkmAacus2NSixs3RSobdC-b8cEjahtqucFFnoWZy4TKDZW"/>
+<div class="absolute inset-0 luxury-gradient"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 font-label-md text-label-md rounded">₹31,999/-</div>
+</div>
+<div class="absolute bottom-0 left-0 p-6 text-white w-full">
+<h3 class="font-headline-md text-headline-md mb-1">Rajasthan: Rajwara Swag</h3>
+<p class="font-caption text-caption opacity-90 mb-3 uppercase tracking-tighter">Udaipur &amp; Jaipur • 5 Nights</p>
+<div class="flex justify-between items-center">
+<p class="font-body-md text-sm italic">"Kyunki tumhara ghar palace se kam thodi hai?"</p>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote / Divider -->
+<section class="bg-primary-container text-on-primary-container px-margin-mobile py-stack-lg text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4">format_quote</span>
+<h2 class="font-headline-md text-headline-md mb-4 italic">"Duniya ghoom li, par ghar jaisa maza kahin nahi."</h2>
+<p class="font-caption text-caption uppercase tracking-widest opacity-80">— Every Kanpuriya Chacha, Ever.</p>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile Specific) -->
+<div class="fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant/10 px-margin-mobile py-3 flex justify-between items-center z-50 md:hidden">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-caption text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary font-bold border-t-2 border-secondary pt-1" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-caption text-[10px]">Destinations</span>
+</a>
+<div class="relative -top-8">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">luggage</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-caption text-[10px]">My Safar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-caption text-[10px]">Profile</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-tertiary-container dark:bg-tertiary text-on-tertiary-container mt-12 pb-32">
+<div class="max-w-container-max mx-auto px-margin-mobile grid grid-cols-1 gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-secondary-fixed italic">Kanpuriya Travel</span>
+<p class="font-caption text-caption text-tertiary-fixed-dim">Maharaja service, Mohalla price. Don't worry, itne mein toh sirf ek sherwani aati hai.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 pt-4 border-t border-tertiary-fixed-variant/20">
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white transition-all" href="#">Sasti Masti</a>
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white transition-all" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white transition-all" href="#">Hum Kaun Hain?</a>
+</div>
+<p class="font-caption text-[10px] text-tertiary-fixed-dim mt-4 opacity-60">© 2024 Kanpuriya Travel. All rights reserved for Jiju's favorite travel agency.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.transition = 'transform 0.2s ease';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Sticky nav scroll behavior
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-md');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                nav.style.transform = 'translateY(-100%)';
+                nav.style.transition = 'transform 0.3s ease';
+            } else {
+                nav.style.transform = 'translateY(0)';
+                nav.classList.add('shadow-md');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

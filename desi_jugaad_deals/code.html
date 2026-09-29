@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jugaad Deals | Kanpuriya Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "on-surface-variant": "#3f4948",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "primary-fixed": "#b1eeea",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#004b49",
+                    "on-tertiary-fixed": "#1b1c1a",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#00201f",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "outline-variant": "#bfc8c7",
+                    "on-primary-fixed-variant": "#084f4d",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "surface": "#fcf9f8",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#785a1a",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#003331",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#2c2d2a",
+                    "primary-fixed-dim": "#95d1ce",
+                    "on-tertiary-container": "#b0afac",
+                    "secondary-container": "#fed488",
+                    "inverse-primary": "#95d1ce",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e4e2de",
+                    "secondary": "#775a19",
+                    "outline": "#707978",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-container-highest": "#e5e2e1",
+                    "tertiary-container": "#424340",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-fixed": "#261900",
+                    "surface-tint": "#2a6865",
+                    "on-primary-container": "#7ebab7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1200px",
+                    "stack-lg": "48px",
+                    "stack-md": "24px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "caption": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #fcf9f8 100%);
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(254, 212, 136, 0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 51, 49, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 h-20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-md text-headline-md text-primary italic">Kanpuriya Travel</span>
+<div class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-secondary pb-1" href="#">Jugaad Deals</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">My Safar</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hinglish Guide</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md hover:opacity-80 transition-opacity">
+                    Chalo Bag Pack Karo
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative py-stack-lg overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md mb-stack-sm uppercase tracking-widest">
+                    Paisa Vasool Travel
+                </span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-md">
+                    Itni sasti flight ki <br/>
+<span class="text-secondary italic">bird bhi jal jaye</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-stack-md">
+                    Maharaja service, Mohalla price. Experience luxury without selling your kidney. Welcome to the world of smart 'Jugaad'.
+                </p>
+<div class="flex gap-stack-md items-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-caption text-caption italic">Trusted by 50,000+ Kanpuriya Travelers</span>
+</div>
+</div>
+<div class="relative h-[500px] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Snow-capped mountains of Gulmarg, Kashmir, with a luxury resort in the foreground. Crisp, high-end winter travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWjAV4Afwlap9YtfywUS7A19w7XE9jtAqk0hD_aSq3V34-2vnr9Y_IDwGeHs1cKSakHiz-6ojNeIJWUXYObnePynuc4exX-fK_gFmyXSP1UhMyGaVGWgtBjMDnIWzyyOxDnxst7ChYltPG4el0RgAzkv-9Abz5JVCezLJZ5xQseDwIquFJOjbNvu1KwcQGXwP4I8g-TlCjLehzB_dwKSgz_SopLMNUh1_kha26R7N6s4LfaP_a9n33nblyfEr1EHvfJk5zlNP8r-P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md glass-card p-stack-md rounded-lg max-w-xs">
+<p class="font-label-md text-primary italic mb-1">"Kashmir ki Kali, but cheaper than a flight to Lucknow"</p>
+<p class="text-caption font-caption text-on-surface-variant opacity-70">— Random Happy Customer</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Filter Section -->
+<section class="bg-surface-container-low py-stack-md sticky top-20 z-40 border-y border-outline-variant/10 shadow-sm">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap items-center justify-between gap-gutter">
+<div class="flex items-center gap-stack-md">
+<span class="font-headline-md text-primary">Kitna kharcha karoge?</span>
+<div class="flex gap-stack-sm">
+<button class="px-6 py-2 rounded-full border border-primary text-primary font-label-md hover:bg-primary hover:text-on-primary transition-all">Sasti Masti</button>
+<button class="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md border border-secondary-container">Ameeri Wali Feeling</button>
+<button class="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-label-md">Middle Class Luxury</button>
+</div>
+</div>
+<div class="flex items-center gap-stack-sm bg-white border border-outline-variant rounded-lg px-4 py-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 font-body-md text-on-surface-variant w-48" placeholder="Dhoondo apna sapna..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Deals Grid -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Deal Card 1 -->
+<div class="group relative bg-white border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury houseboat in the Kerala backwaters, lush greenery, serene water, premium wooden finish, high-end travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXO8Cg4VKG6ZXDE0dLK_YvKZU1xnA_PKWVPALy_BhJoSNqkGTR8VNHw9qH3oru4Gyu02rsUOfCddrlQb5gEnx0GVKrNejbLH9JYgiRxmc6frl5iduY7vnuJYeS3zxtoEyOK-c2Huj9VQFtI_dg2ZA0uh1O4DHQ9eUb8tUYh_BwH3swULv73OFwTewSIkUVK4FdZcE_6vDlSu6rhlZZD16XPXVwldBEqN9sKEEJyppClOYiHamjmLMC8vHxr53fPcWEmRfICywk-diP"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded font-label-md">Sasti Masti</span>
+<span class="bg-primary text-on-primary px-3 py-1 rounded font-label-md">Hot Deal</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Kerala Backwaters</h3>
+<div class="text-right">
+<span class="block text-caption text-outline line-through">₹85,000</span>
+<span class="text-headline-md text-secondary font-bold">₹24,999</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Luxury houseboat, coconut water, aur public ke saamne chaud. 5 nights of sheer peace.</p>
+<div class="flex items-center gap-2 mb-stack-md py-2 border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm">info</span>
+<span class="text-caption font-caption text-on-secondary-fixed-variant">Kanpuriya Fact: Itne mein toh sirf ek sherwani aati hai.</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md hover:bg-primary-container transition-colors">Abhi Book Karo</button>
+</div>
+</div>
+<!-- Deal Card 2 -->
+<div class="group relative bg-white border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Snow-capped mountains of Gulmarg, Kashmir, with a luxury resort in the foreground. Crisp, high-end winter travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWjAV4Afwlap9YtfywUS7A19w7XE9jtAqk0hD_aSq3V34-2vnr9Y_IDwGeHs1cKSakHiz-6ojNeIJWUXYObnePynuc4exX-fK_gFmyXSP1UhMyGaVGWgtBjMDnIWzyyOxDnxst7ChYltPG4el0RgAzkv-9Abz5JVCezLJZ5xQseDwIquFJOjbNvu1KwcQGXwP4I8g-TlCjLehzB_dwKSgz_SopLMNUh1_kha26R7N6s4LfaP_a9n33nblyfEr1EHvfJk5zlNP8r-P"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded font-label-md">Ameeri Wali Feeling</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Gulmarg ki Shaan</h3>
+<div class="text-right">
+<span class="block text-caption text-outline line-through">₹2,40,000</span>
+<span class="text-headline-md text-secondary font-bold">₹99,999</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Ski resorts and Kahwa. Feels like Yash Chopra movie, costs like a Bhojpuri one.</p>
+<div class="flex items-center gap-2 mb-stack-md py-2 border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm">flight_takeoff</span>
+<span class="text-caption font-caption text-on-secondary-fixed-variant">Bonus: Direct connection from your dreams.</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md hover:bg-primary-container transition-colors">Chalo Bag Pack Karo</button>
+</div>
+</div>
+<!-- Deal Card 3 -->
+<div class="group relative bg-white border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A majestic aerial view of the Taj Mahal in Agra at sunrise, with the Yamuna river flowing nearby. The white marble is glowing in the early light. Premium high-fashion editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq0padn2OCh2pwHPyhcSbFAg6GIW_ZvYg-9S246PkztVv9MF0XE38gVSWv0Ra0erm5BBqgTh7mtZT9Fw97NgXfCQBvIo45sk5kFvDPEmR8trb-myY33_hmAeNiUDLHWdLF-bW63kV59Tc7CGputWgPam0puptIRW1Ruw912M2cF8TB7uoDuNzbRv2VRvTyMCQF2GdE4v2w-bTxj1JIV4biqSkGhUBWrfZp_rlyyHwbXGp9U2U90RQ3DTfVelImO3iuGH_shskbVhLS"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded font-label-md">Sasti Masti</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Agra Taj Special</h3>
+<div class="text-right">
+<span class="block text-caption text-outline line-through">₹65,000</span>
+<span class="text-headline-md text-secondary font-bold">₹19,999</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Taj Mahal selfie and petha party. Luxury at mohalla rates. Habibi, come to Agra!</p>
+<div class="flex items-center gap-2 mb-stack-md py-2 border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm">shopping_bag</span>
+<span class="text-caption font-caption text-on-secondary-fixed-variant">Tip: Save more money for marble shopping there.</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md hover:bg-primary-container transition-colors">Isko Book Karo</button>
+</div>
+</div>
+<!-- Deal Card 4 -->
+<div class="group relative bg-white border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene sunrise view of a luxury tented camp in the Rajasthani desert. The tents are elegantly designed with traditional patterns and modern amenities, surrounded by golden sand dunes. A fire pit is set up in front of the tents with low seating and colorful cushions. The light is soft and warm, highlighting the textures of the sand and fabric. A high-end travel magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChypV-xFB5PVXNI95fqNjJhCHR_x0B8o29f8WTlDGICgGNVvDTU2SVubgQk-rFU1iiPhQEl6LtpwzDdFqo0fJ5wJo65fmf6Sqv80D43CXlqeZf_UjXkkuNzj-4kHoI9PPm0ZtmpxJna0uNv6YaMWkHa_UIyvtxjZWOKuSedpsTC3G_vUctcyaveNUOSaj5F8dCm1X7VJ_7JS03sEk27AtkMeVGUQ1zVOB81Bp1fLw6OSbnyK2Jh1tkj_pTfCq4VEufQ7SFCoa2BfGB"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded font-label-md">Ameeri Wali Feeling</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Royal Rajasthan Safari</h3>
+<div class="text-right">
+<span class="block text-caption text-outline line-through">₹45,000</span>
+<span class="text-headline-md text-secondary font-bold">₹12,499</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Tent stay that’s better than your house. Camel ride and dal-baati-churma included.</p>
+<div class="flex items-center gap-2 mb-stack-md py-2 border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm">bed</span>
+<span class="text-caption font-caption text-on-secondary-fixed-variant">Kanpuriya Fact: Tent is so luxury, you'll forget your flat.</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md hover:bg-primary-container transition-colors">Humko Le Chalo</button>
+</div>
+</div>
+<!-- Deal Card 5 -->
+<div class="group relative bg-white border border-outline-variant/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene landscape of a luxury tea plantation resort in Munnar, Kerala. Rolling green hills covered in tea bushes, with a colonial-style resort building nestled among them. Soft morning mist hangs in the valley. Professional landscape photography with vibrant greens and soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0EmSM6yrFn3FzTbVpTg4WBbGJQgM5ZdiHRiBYCUSm4VP4Z8ARG3sPUoIj6hGeuMaAOPmk7NVipjT2UsmEN1S-HIZKIoz-PwJQWBQe9P5Fw3BYLK0qwNE8bOb3p7qSBTV7W6A5IBL6q_UIVUYlDR3ADnFq0dCgC2y2EAMrdMeoRwTRcQeA8b9lzR-gTr51OEZO8T8EECxG7KbJqR2BEtW0Xsf7lfVUrrh04hCxI882EfXHg0NEbDaxUHElm94gYBt3WgFX0dKbAfK6"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded font-label-md">Sasti Masti</span>
+<span class="bg-primary text-on-primary px-3 py-1 rounded font-label-md">Best Seller</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-primary">Munnar Tea Trails</h3>
+<div class="text-right">
+<span class="block text-caption text-outline line-through">₹55,000</span>
+<span class="text-headline-md text-secondary font-bold">₹15,000</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Greenery everywhere where you can see tea leaves, and leaves can see your cheap deal.</p>
+<div class="flex items-center gap-2 mb-stack-md py-2 border-y border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm">payments</span>
+<span class="text-caption font-caption text-on-secondary-fixed-variant">Tip: No interest, only 100% interest in fun.</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded font-label-md hover:bg-primary-container transition-colors">Chalo Jaldi</button>
+</div>
+</div>
+<!-- Deal Card 6 (Bento Style/Larger) -->
+<div class="group relative bg-primary-container text-on-primary-container rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 p-8 flex flex-col justify-center border border-primary">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-10">
+<span class="material-symbols-outlined text-9xl" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-primary-container">Surprise 'Kismat' Trip</h2>
+<p class="font-body-lg mb-stack-md">We pick the Indian gem, you pay the pocket change. Luxury guaranteed in any desi location, hidden till 24hrs before.</p>
+<div class="flex items-baseline gap-2 mb-stack-md">
+<span class="text-headline-xl font-bold">₹9,999</span>
+<span class="text-label-md opacity-70">Flat Price</span>
+</div>
+<button class="w-full py-4 bg-secondary-fixed text-on-secondary-fixed rounded-lg font-label-md hover:scale-105 transition-transform active:scale-95">Risk Hai Toh Ishq Hai</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-tertiary-container">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<span class="font-headline-md text-headline-md text-secondary-fixed block mb-stack-sm">Kanpuriya Travel</span>
+<p class="font-caption text-caption text-tertiary-fixed-dim max-w-xs mb-stack-md">
+                    Humaara maqsad hai aapko ameer dikhaana, chahe aapki jeb kahe 'bas kar bhai'.
+                </p>
+<div class="flex gap-4">
+<a class="text-tertiary-fixed-dim hover:text-white transition-all" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-2">
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="#">Sasti Masti</a>
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white hover:underline transition-all underline" href="#">Hum Kaun Hain?</a>
+<p class="font-caption text-caption text-tertiary-fixed-dim mt-4">
+                        © 2024 Kanpuriya Travel. Maharaja service, Mohalla price.
+                    </p>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for mobile focus -->
+<button class="fixed bottom-8 right-8 bg-secondary text-on-secondary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 transition-transform active:scale-95 md:hidden">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</button>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const badge = card.querySelector('.bg-secondary');
+                if(badge) badge.classList.add('scale-110');
+            });
+            card.addEventListener('mouseleave', () => {
+                const badge = card.querySelector('.bg-secondary');
+                if(badge) badge.classList.remove('scale-110');
+            });
+        });
+
+        // Witty filter button toggle
+        const filterBtns = document.querySelectorAll('button.px-6.py-2');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                    b.classList.add('border-outline', 'text-on-surface-variant');
+                });
+                btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+                btn.classList.remove('border-outline', 'text-on-surface-variant');
+            });
+        });
+    </script>
+</body></html>

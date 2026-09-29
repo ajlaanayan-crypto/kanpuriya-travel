@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kanpuriya Travel | Maharaja Service, Mohalla Price</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: linear-gradient(180deg, rgba(0, 51, 49, 0.8) 0%, rgba(0, 51, 49, 0.4) 50%, rgba(252, 249, 248, 1) 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e5e2e1",
+                      "background": "#fcf9f8",
+                      "on-surface-variant": "#3f4948",
+                      "surface-container-high": "#eae7e7",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#f0eded",
+                      "primary-fixed": "#b1eeea",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#004b49",
+                      "on-tertiary-fixed": "#1b1c1a",
+                      "inverse-on-surface": "#f3f0ef",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#00201f",
+                      "tertiary-fixed-dim": "#c8c6c3",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline-variant": "#bfc8c7",
+                      "on-primary-fixed-variant": "#084f4d",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "surface": "#fcf9f8",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container-low": "#f6f3f2",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#785a1a",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fcf9f8",
+                      "primary": "#003331",
+                      "on-surface": "#1c1b1b",
+                      "tertiary": "#2c2d2a",
+                      "primary-fixed-dim": "#95d1ce",
+                      "on-tertiary-container": "#b0afac",
+                      "secondary-container": "#fed488",
+                      "inverse-primary": "#95d1ce",
+                      "secondary": "#775a19",
+                      "outline": "#707978",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#ffdea5",
+                      "surface-container-highest": "#e5e2e1",
+                      "tertiary-container": "#424340",
+                      "on-background": "#1c1b1b",
+                      "on-secondary-fixed": "#261900",
+                      "surface-tint": "#2a6865",
+                      "on-primary-container": "#7ebab7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1200px",
+                      "stack-lg": "48px",
+                      "stack-md": "24px",
+                      "stack-sm": "8px",
+                      "margin-desktop": "40px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Libre Caslon Text"],
+                      "headline-md": ["Libre Caslon Text"],
+                      "caption": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Libre Caslon Text"],
+                      "headline-xl": ["Libre Caslon Text"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed italic font-bold">
+                Kanpuriya Travel
+            </div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">Jugaad Deals</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Destinations</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">My Safar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Hinglish Guide</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-2">
+                Chalo Bag Pack Karo
+                <span class="material-symbols-outlined text-sm">flight_takeoff</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center text-center overflow-hidden">
+<!-- Hero Image Background -->
+<div class="absolute inset-0 -z-10 overflow-hidden">
+<div class="w-full h-full scale-105 bg-cover bg-center" data-alt="Cinematic, luxury travel photo of the Varanasi Ghats at sunset with glowing diyas on the Ganges. High-end, travel magazine style. Deep teals and golden light. No people, just the stunning architecture and atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDh1XUqbt3qbqtkoKFBu7qMq9IgSyLOOoGHc4gxPkV_gdBBVWGwSIOyEL3p0J7RJ33wxrl9JMyyQbe-DXb0wLTaF-73Uip_r0irnofzI-bYdGoioS2CU0RJP7CvIzNZRLSeg56e395I4JoGaaQshfBfZ84fRtjB3Un7xw6TAta0KCZyi4Lc-nuhpFpiY1r5R_LdGr_awOJmIejTUiuOWv19Apyt_KUGCSy8dt9jlxQ5LJuqwBrrDHuOujDZqbL2Clr5VvruvR_53gQM')"></div>
+<div class="absolute inset-0 luxury-gradient"></div>
+</div>
+<div class="max-w-4xl px-margin-mobile md:px-0">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-md text-label-md mb-stack-sm uppercase tracking-widest">
+                    Best Value, No Cap
+                </span>
+<h1 class="font-headline-xl text-headline-xl text-white mb-stack-sm drop-shadow-lg md:leading-tight">
+                    Maharaja Feel, <br/>
+<span class="italic text-secondary-fixed">Mohalla Price.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-stack-lg max-w-2xl mx-auto drop-shadow-md">
+                    Budget itna kam ki pocket ko pata bhi na chale. Explore the world like a King while paying like a localite. 
+                </p>
+<!-- Search Bar -->
+<div class="w-full max-w-2xl bg-white/10 backdrop-blur-xl p-2 rounded-full border border-white/20 flex items-center shadow-2xl">
+<div class="flex-1 px-6 text-left border-r border-white/20">
+<label class="block font-caption text-caption text-secondary-fixed uppercase tracking-tighter">Destination</label>
+<input class="bg-transparent border-none text-white focus:ring-0 w-full placeholder:text-white/60 font-body-md" placeholder="Kahan jana hai?" type="text"/>
+</div>
+<div class="flex-1 px-6 text-left hidden md:block">
+<label class="block font-caption text-caption text-secondary-fixed uppercase tracking-tighter">Dates</label>
+<input class="bg-transparent border-none text-white focus:ring-0 w-full placeholder:text-white/60 font-body-md" placeholder="Kab chalna hai?" type="text"/>
+</div>
+<button class="bg-secondary text-on-secondary p-4 rounded-full hover:scale-95 transition-transform">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Top Destination Picks (Bento) -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Top Destination Picks</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Dubai nahi, ab Desi thhaat dekho. Sab sorted hai.</p>
+</div>
+<a class="text-secondary font-bold hover:underline flex items-center gap-2" href="#">
+                    Dekho Saare Destinations <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="bento-grid">
+<!-- Large Feature Card -->
+<div class="col-span-12 md:col-span-7 group cursor-pointer overflow-hidden rounded-xl relative h-[500px] border border-primary/5">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-110 bg-cover bg-center" data-alt="Cinematic, luxury travel photo of the Varanasi Ghats at sunset with glowing diyas on the Ganges. High-end, travel magazine style. Deep teals and golden light. No people, just the stunning architecture and atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDh1XUqbt3qbqtkoKFBu7qMq9IgSyLOOoGHc4gxPkV_gdBBVWGwSIOyEL3p0J7RJ33wxrl9JMyyQbe-DXb0wLTaF-73Uip_r0irnofzI-bYdGoioS2CU0RJP7CvIzNZRLSeg56e395I4JoGaaQshfBfZ84fRtjB3Un7xw6TAta0KCZyi4Lc-nuhpFpiY1r5R_LdGr_awOJmIejTUiuOWv19Apyt_KUGCSy8dt9jlxQ5LJuqwBrrDHuOujDZqbL2Clr5VvruvR_53gQM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md text-white">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded font-label-md text-label-md uppercase mb-2 inline-block">Best Seller</span>
+<h3 class="font-headline-md text-headline-md mb-1">Varanasi Vibes, but cheaper than New York</h3>
+<p class="font-body-md text-body-md text-surface-variant opacity-90">Ganges Aarti is cool, but have you seen our VIP boat access? Maharaja treatment for the price of a suit-boot.</p>
+<div class="mt-4 flex items-center gap-4">
+<span class="text-secondary-fixed font-bold text-2xl">₹9,999/-</span>
+<span class="text-surface-variant line-through opacity-60">₹25,000</span>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="col-span-12 md:col-span-5 group cursor-pointer overflow-hidden rounded-xl relative h-[500px] border border-primary/5">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-110" data-alt="A lush, vibrant emerald green tea plantation in Munnar, India, captured during early morning mist. The lighting is atmospheric and soft, emphasizing the rich natural textures. The visual style is crisp and high-contrast, fitting a premium travel brochure that showcases exotic yet accessible local destinations with editorial grace." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmYVhga45rqGAqPsGffOyMms5qdw5rcSphVIexaIlHjAnRfHzemVWSZWCywMt1siQ3q29Blk7d7tGNb6Nu-Cgvu1TVYtqx1ER_DX7S0KMoDYWNyoCp6-_QPOuWf9eLPyi8bkjfDD44Aycqg5PYLKeGjCZOoAxMSgvSQ9Ki9H7NrAu6irULDKg-_zUtBoCqrVYBMrTqohAUT5PWKrasL9oKVVFHx87vRCHabRCapfz57gSogpQ06bWcm4zoaZ5pWtk86O0_sYXBvSSO')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md text-white w-full">
+<h3 class="font-headline-md text-headline-md mb-1">Munnar: Chill like a Don</h3>
+<p class="font-body-md text-body-md text-surface-variant opacity-90">Foggy mountains, hot tea, and zero office calls. Pure sukkoon.</p>
+<div class="mt-4">
+<span class="text-secondary-fixed font-bold text-xl">₹12,500/-</span>
+</div>
+</div>
+</div>
+<!-- Secondary Row -->
+<div class="col-span-12 md:col-span-4 group cursor-pointer overflow-hidden rounded-xl relative h-[350px] border border-primary/5">
+<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-110 bg-cover bg-center" data-alt="Majestic view of the Amer Fort in Jaipur, Rajasthan. Golden hour, luxury heritage travel style, intricate architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3WfyAVyR7z94dE-2C_M1g1pS4m-BlvZEY5QsuGKyiaHMvnMXX2oYMtTaMA_OJKA3vVEoJApeJwUhYpfz9bldMX8CsZHAc6xMIADDbxGL1LKddzotc_gN7AM06kR25ckE2Xqh7yqBQGiuhJNflRk0n3mKN31XnvpwiYWrmtqysuibPjHMVKxsBgEmhsl4W8dc8u4nQylzQiTZsf65KbPJcMUTn7lWHp7rn100MJDJ-iKyb1A6acPiS8nBtjCAjS-Sh99NZXI0cO_zb')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md text-white">
+<h4 class="font-headline-md text-headline-md">Jaipur: Habibi, come here!</h4>
+<p class="text-caption text-surface-variant mb-1">(Wait, Jaipur me Habibi? Heritage bolo!)</p>
+<div class="text-secondary-fixed font-bold">₹15k Only</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 bg-primary-container rounded-xl flex items-center justify-between p-stack-md text-on-primary-container relative overflow-hidden">
+<div class="z-10 max-w-md">
+<h4 class="font-headline-md text-headline-md text-white mb-2 italic">The 'Custom Itinerary' Jugaad</h4>
+<p class="font-body-md text-body-md text-primary-fixed mb-4">Don't like our packages? Humse baat karo, hum tumhare liye exclusive plan banayenge. Budget tumhara, plan humara.</p>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-6 py-3 rounded-xl font-label-md text-label-md">Dada se baat karvao</button>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">luggage</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Bakchodi (Testimonials) -->
+<section class="py-stack-lg bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Client Bakchodi</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Don't listen to us, listen to these happy travellers who saved enough to buy a bike later.</p>
+</div>
+<div class="flex gap-gutter animate-marquee whitespace-nowrap">
+<!-- Testimonial 1 -->
+<div class="min-w-[400px] bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4 whitespace-normal text-on-surface">"Bhai, Varanasi gaye thhey. Itna sasta ki laga koi kidney toh nahi nikal lega? But nahi, service ek dum Maharaja thhi!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<span class="font-label-md text-label-md">Pappu From Kanpur</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[400px] bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4 whitespace-normal text-on-surface">"Hrishikesh vibes at Civil Lines price. Seriously, wife khush, pocket khush. Aur kya chahiye?"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed"></div>
+<span class="font-label-md text-label-md">Anjali Bhabhi</span>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-[400px] bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4 whitespace-normal text-on-surface">"Rajasthan trip was lit. Inke guide ne itne ache photos kheeche ki Tinder match 10x badh gaye."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed"></div>
+<span class="font-label-md text-label-md">Bunty Soni</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-desktop text-center">
+<div class="bg-primary p-stack-lg rounded-[40px] text-on-primary relative overflow-hidden">
+<div class="z-10 relative">
+<h2 class="font-headline-lg text-headline-xl mb-4 italic">Zindagi Choti Hai, India Dekho.</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-stack-md max-w-2xl mx-auto">
+                        Don't wait for the 'perfect time'. Perfect time tab hai jab hum sasta offer de rahe hain. 
+                        Join 10k+ Kanpuriyas travelling the nation!
+                    </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-label-md text-label-md hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                            Abhi Book Karo! <span class="material-symbols-outlined">bolt</span>
+</button>
+<button class="border border-on-primary/30 text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md hover:bg-white/10 transition-colors">
+                            Bhabhi se puch ke batata hoon
+                        </button>
+</div>
+</div>
+<!-- Abstract decorative element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container rounded-full blur-[100px] -ml-32 -mb-32"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-tertiary-container dark:bg-tertiary mt-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<div class="font-headline-md text-headline-md text-secondary-fixed mb-stack-sm">Kanpuriya Travel</div>
+<p class="font-caption text-caption text-tertiary-fixed-dim max-w-sm">
+                    © 2024 Kanpuriya Travel. Maharaja service, Mohalla price. All rights reserved. No refunds on jokes, only on tickets (maybe).
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="flex flex-col space-y-2">
+<a class="text-secondary-fixed underline font-caption text-caption" href="#">Sasti Masti</a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all font-caption text-caption" href="#">Privacy Policy</a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all font-caption text-caption" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="text-tertiary-fixed-dim hover:text-white transition-all font-caption text-caption" href="#">Hum Kaun Hain?</a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all font-caption text-caption" href="#">Instagram</a>
+<a class="text-tertiary-fixed-dim hover:text-white transition-all font-caption text-caption" href="#">Twitter</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple marquee animation logic for testimonials
+        const marquee = document.querySelector('.animate-marquee');
+        let scrollPos = 0;
+        function step() {
+            scrollPos += 0.5;
+            if (scrollPos > 400) scrollPos = 0;
+            marquee.style.transform = `translateX(-${scrollPos}px)`;
+            requestAnimationFrame(step);
+        }
+        // requestAnimationFrame(step); // Uncomment to enable marquee animation
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-grid > div').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

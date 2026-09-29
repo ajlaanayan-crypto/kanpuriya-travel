@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>My Safar | Kanpuriya Travel</title>
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e5e2e1",
+            "background": "#fcf9f8",
+            "on-surface-variant": "#3f4948",
+            "surface-container-high": "#eae7e7",
+            "on-secondary": "#ffffff",
+            "surface-container": "#f0eded",
+            "primary-fixed": "#b1eeea",
+            "on-error-container": "#93000a",
+            "primary-container": "#004b49",
+            "on-tertiary-fixed": "#1b1c1a",
+            "inverse-on-surface": "#f3f0ef",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#00201f",
+            "tertiary-fixed-dim": "#c8c6c3",
+            "on-secondary-fixed-variant": "#5d4201",
+            "outline-variant": "#bfc8c7",
+            "on-primary-fixed-variant": "#084f4d",
+            "on-error": "#ffffff",
+            "inverse-surface": "#313030",
+            "surface": "#fcf9f8",
+            "surface-dim": "#dcd9d9",
+            "surface-container-low": "#f6f3f2",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#785a1a",
+            "on-tertiary-fixed-variant": "#474744",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fcf9f8",
+            "primary": "#003331",
+            "on-surface": "#1c1b1b",
+            "tertiary": "#2c2d2a",
+            "primary-fixed-dim": "#95d1ce",
+            "on-tertiary-container": "#b0afac",
+            "secondary-container": "#fed488",
+            "inverse-primary": "#95d1ce",
+            "secondary-fixed-dim": "#e9c176",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#e4e2de",
+            "secondary": "#775a19",
+            "outline": "#707978",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#ffdea5",
+            "surface-container-highest": "#e5e2e1",
+            "tertiary-container": "#424340",
+            "on-background": "#1c1b1b",
+            "on-secondary-fixed": "#261900",
+            "surface-tint": "#2a6865",
+            "on-primary-container": "#7ebab7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "8px",
+            "container-max": "1200px",
+            "stack-lg": "48px",
+            "stack-md": "24px",
+            "stack-sm": "8px",
+            "margin-desktop": "40px",
+            "margin-mobile": "16px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Libre Caslon Text"],
+            "headline-md": ["Libre Caslon Text"],
+            "caption": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Libre Caslon Text"],
+            "headline-xl": ["Libre Caslon Text"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+            "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+
+  <!-- Unified TopNavBar -->
+  <header class="w-full sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20">
+    <nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+      <a href="index.html" class="font-headline-md text-headline-md text-primary italic font-bold">
+        Kanpuriya Travel
+      </a>
+      
+      <!-- Nav Links -->
+      <div class="hidden md:flex items-center space-x-gutter">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="deals.html">Jugaad Deals</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="destinations.html">Destinations</a>
+        <a class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="dashboard.html">My Safar</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#" id="hinglish-guide-trigger">Hinglish Guide</a>
+      </div>
+
+      <!-- Auth and CTA Actions -->
+      <div class="flex items-center gap-4">
+        <!-- Auth Profile Widget -->
+        <div id="auth-widget" class="flex items-center gap-3">
+          <button id="auth-signin-btn" class="border border-primary text-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-primary hover:text-white transition-colors">
+            Swagat Giri (Login)
+          </button>
+        </div>
+
+        <button id="quick-book-btn" class="bg-primary text-on-primary px-5 py-3 rounded-xl font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-2">
+          Chalo Bag Pack Karo
+          <span class="material-symbols-outlined text-sm">flight_takeoff</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Dashboard Container -->
+  <main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+    
+    <!-- State: Not Authenticated View -->
+    <div id="unauth-view" class="text-center py-20 bg-surface-container-low rounded-2xl border border-outline-variant/30 max-w-2xl mx-auto shadow-md space-y-6">
+      <div class="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mx-auto text-4xl">
+        <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">luggage</span>
+      </div>
+      <div class="space-y-2">
+        <h2 class="font-headline-lg text-primary italic">Khata Chalu Karein (Login Required)</h2>
+        <p class="font-body-md text-on-surface-variant max-w-md mx-auto">
+          Sign in kijiye taaki aap apna loyal wallet balance (Kharcha Paani), saved destinations, aur timeline details check kar sakein!
+        </p>
+      </div>
+      <button onclick="document.getElementById('auth-modal').showModal()" class="bg-primary text-white px-8 py-3 rounded-xl font-label-md hover:opacity-90 transition-opacity">
+        Swagat Giri / Dakhila Le (Login / Sign Up)
+      </button>
+    </div>
+
+    <!-- State: Authenticated View -->
+    <div id="auth-view" class="hidden space-y-stack-lg">
+      <!-- Header Section -->
+      <header class="mb-stack-lg">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+          <div>
+            <span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-2" id="user-greeting-label">Swagat Hai, Maharaja</span>
+            <h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+              Aapka agla kaand <br/>yahan wait kar raha hai
+            </h1>
+          </div>
+          
+          <!-- Loyalty Balance Widget -->
+          <div class="bg-secondary-container p-6 rounded-xl border border-secondary/10 flex items-center gap-6 shadow-sm">
+            <div class="w-12 h-12 bg-on-secondary-container rounded-full flex items-center justify-center text-secondary-container">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">wallet</span>
+            </div>
+            <div>
+              <p class="font-label-md text-label-md text-on-secondary-container opacity-70">Kharcha Paani (Loyalty)</p>
+              <p class="font-headline-md text-headline-md text-on-secondary-container" id="user-wallet-balance">₹24,500.00</p>
+            </div>
+            <!-- Dynamic Add Wallet Bonus -->
+            <button id="add-wallet-bonus-btn" class="ml-4 hover:rotate-12 transition-transform" title="Claim Daily Desi Reward">
+              <span class="material-symbols-outlined text-on-secondary-container">add_circle</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Bento Grid Dashboard -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        
+        <!-- Upcoming Trip (Featured) -->
+        <div id="dashboard-upcoming-trip-card" class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all hover:shadow-md h-[500px]">
+          <!-- Loaded dynamically via JS -->
+        </div>
+
+        <!-- Profile & Quick Stats -->
+        <div class="md:col-span-4 flex flex-col gap-gutter">
+          
+          <!-- User Stats Card -->
+          <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center">
+            <div class="relative mb-4">
+              <div class="w-24 h-24 rounded-full border-2 border-secondary p-1">
+                <img id="dashboard-user-avatar" class="w-full h-full rounded-full object-cover" src="" alt="User profile image">
+              </div>
+              <div class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-1.5 border-4 border-surface-container-lowest">
+                <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              </div>
+            </div>
+            <h3 class="font-headline-md text-primary" id="dashboard-user-name">Rahul Khanna</h3>
+            <p class="text-on-surface-variant font-caption uppercase tracking-wider mb-6">Platinum Safar Member</p>
+            
+            <div class="grid grid-cols-2 w-full gap-4 pt-6 border-t border-outline-variant/20">
+              <div>
+                <p class="font-headline-md text-secondary" id="stat-trips-done">12</p>
+                <p class="text-caption text-on-surface-variant uppercase">Trips Done</p>
+              </div>
+              <div>
+                <p class="font-headline-md text-secondary" id="stat-kms-travelled">42k</p>
+                <p class="text-caption text-on-surface-variant uppercase">KMs Travelled</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support Card -->
+          <div class="bg-primary p-8 rounded-xl text-white relative overflow-hidden group h-full flex-1 min-h-[180px]">
+            <div class="relative z-10">
+              <h4 class="font-headline-md mb-2">Phas Gaye Kya?</h4>
+              <p class="opacity-80 font-body-md mb-6">Our travel gurus are available 24/7 to solve your 'siyappa'.</p>
+              <button onclick="alert('Dada is fetching cold lassi to solve your problem... Call us at +91-KANPUR-100')" class="flex items-center gap-2 font-label-md text-secondary-fixed group-hover:gap-4 transition-all">
+                Chat With Us <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+            <span class="material-symbols-outlined absolute -bottom-6 -right-6 text-[120px] opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-500">support_agent</span>
+          </div>
+        </div>
+
+        <!-- Saved Sapne (Wishlist) -->
+        <div class="md:col-span-12 py-stack-sm">
+          <div class="flex items-center justify-between mb-stack-md">
+            <h3 class="font-headline-md text-primary italic">Saved Sapne (Wishlist)</h3>
+            <a class="text-secondary font-label-md border-b border-secondary" href="destinations.html">Dekho Sab Kuch</a>
+          </div>
+          
+          <div id="wishlist-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- History of Kaands (Timeline) -->
+        <div class="md:col-span-12 bg-surface-container-low p-margin-desktop rounded-xl border border-outline-variant/20">
+          <div class="flex items-center gap-4 mb-stack-md">
+            <span class="material-symbols-outlined text-primary">timeline</span>
+            <h3 class="font-headline-md text-primary">History of Kaands (Recent Trips)</h3>
+          </div>
+          
+          <div id="completed-trips-timeline" class="space-y-6">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Unified Footer -->
+  <footer class="w-full py-stack-lg bg-tertiary-container mt-stack-lg">
+    <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <div>
+        <div class="font-headline-md text-headline-md text-secondary-fixed mb-stack-sm">Kanpuriya Travel</div>
+        <p class="font-caption text-caption text-tertiary-fixed-dim">
+          © 2026 Kanpuriya Travel. Maharaja service, Mohalla price. All rights reserved.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+        <a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white" href="deals.html">Sasti Masti</a>
+        <a class="font-caption text-caption text-tertiary-fixed-dim hover:text-white" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin Settings button -->
+  <button id="admin-panel-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 active:scale-95 transition-transform z-40">
+    <span class="material-symbols-outlined text-2xl group-hover:rotate-45 transition-transform">settings</span>
+  </button>
+
+  <!-- Login/Register Dialog Modal -->
+  <dialog id="auth-modal" closedby="any" aria-labelledby="auth-modal-title">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h3 id="auth-modal-title" class="font-headline-md text-primary font-bold">Swagat Giri (Sign In)</h3>
+        <button id="close-auth-modal" class="p-1 hover:bg-surface-container rounded-full text-on-surface-variant flex items-center">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      
+      <form id="auth-form" method="dialog" class="space-y-4">
+        <div>
+          <label class="block text-caption font-label-md text-on-surface-variant mb-1">Email ID</label>
+          <input id="auth-email" type="email" required class="form-input-luxury" placeholder="apna_email@safar.com">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md text-on-surface-variant mb-1">Pass-code (Password)</label>
+          <input id="auth-password" type="password" required class="form-input-luxury" placeholder="Minimum 6 characters">
+        </div>
+        <div id="auth-error-msg" class="text-error text-caption hidden font-medium"></div>
+
+        <div class="flex flex-col gap-3 pt-4">
+          <button id="auth-primary-action-btn" type="submit" class="w-full py-3 bg-primary text-on-primary font-label-md rounded-lg hover:opacity-90 transition-opacity">
+            Dakhila Le (Login)
+          </button>
+          <button id="auth-toggle-mode-btn" type="button" class="w-full text-center text-secondary font-label-md text-sm hover:underline">
+            Naya Khata Kholen? (Register Account)
+          </button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Side Admin Drawer (Dada's Control Panel) -->
+  <div id="admin-drawer-overlay" class="admin-drawer-overlay"></div>
+  <div id="admin-drawer" class="admin-drawer">
+    <div class="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-primary text-on-primary">
+      <div>
+        <h3 class="font-headline-md italic font-bold">Dada's Control Panel</h3>
+        <p class="text-caption text-primary-fixed opacity-80">Chalo naya kaand add karein</p>
+      </div>
+      <button id="close-admin-drawer" class="p-1 hover:bg-primary-container rounded-full text-white flex items-center">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <!-- Scrollable content -->
+    <div class="flex-1 overflow-y-auto p-6 custom-scrollbar space-y-6">
+      <div class="grid grid-cols-4 gap-1 p-1 bg-surface-container rounded-lg">
+        <button data-tab="tab-itinerary" class="tab-btn py-2 text-xs font-label-md text-center rounded bg-white text-primary shadow-sm">Trip</button>
+        <button data-tab="tab-deal" class="tab-btn py-2 text-xs font-label-md text-center rounded text-on-surface-variant">Deal</button>
+        <button data-tab="tab-story" class="tab-btn py-2 text-xs font-label-md text-center rounded text-on-surface-variant">Story</button>
+        <button data-tab="tab-review" class="tab-btn py-2 text-xs font-label-md text-center rounded text-on-surface-variant">Review</button>
+      </div>
+
+      <!-- Tab Itinerary Form -->
+      <form id="form-add-itinerary" class="tab-content space-y-4">
+        <div>
+          <label class="block text-caption font-label-md mb-1">Destination Title</label>
+          <input type="text" name="title" required class="form-input-luxury" placeholder="e.g. Manali Snow Magic">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">State / Location</label>
+          <input type="text" name="state" required class="form-input-luxury" placeholder="e.g. Himachal Pradesh">
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-caption font-label-md mb-1">Deal Price (₹)</label>
+            <input type="number" name="price" required class="form-input-luxury" placeholder="12500">
+          </div>
+          <div>
+            <label class="block text-caption font-label-md mb-1">Original Price (₹)</label>
+            <input type="number" name="originalPrice" required class="form-input-luxury" placeholder="25000">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-caption font-label-md mb-1">Duration</label>
+            <input type="text" name="duration" required class="form-input-luxury" placeholder="4 Nights">
+          </div>
+          <div>
+            <label class="block text-caption font-label-md mb-1">Category</label>
+            <select name="category" class="form-input-luxury">
+              <option value="Spiritual">Spiritual</option>
+              <option value="Royal Heritage">Royal Heritage</option>
+              <option value="Backwaters">Backwaters</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Destination Vibe Copy</label>
+          <textarea name="vibe" required rows="2" class="form-input-luxury" placeholder="What makes it VIP?"></textarea>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Review Feedback Snippet</label>
+          <input type="text" name="feedback" required class="form-input-luxury" placeholder="e.g. Foggy mountains, local chai, pure bliss!">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Image URL</label>
+          <input type="url" name="imageUrl" class="form-input-luxury" placeholder="Leave empty for beautiful random kashmir/varanasi photo">
+        </div>
+        <button type="submit" class="w-full py-3 bg-secondary text-on-secondary font-label-md rounded-lg hover:opacity-90 transition-opacity">
+          Add New Itinerary
+        </button>
+      </form>
+
+      <!-- Tab Deal Form (Hidden) -->
+      <form id="form-add-deal" class="tab-content hidden space-y-4">
+        <div>
+          <label class="block text-caption font-label-md mb-1">Deal Title</label>
+          <input type="text" name="title" required class="form-input-luxury" placeholder="e.g. Hrishikesh Adventure Special">
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-caption font-label-md mb-1">Offer Price (₹)</label>
+            <input type="number" name="price" required class="form-input-luxury" placeholder="8999">
+          </div>
+          <div>
+            <label class="block text-caption font-label-md mb-1">Original Price (₹)</label>
+            <input type="number" name="originalPrice" required class="form-input-luxury" placeholder="20000">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-caption font-label-md mb-1">Budget Category</label>
+            <select name="category" class="form-input-luxury">
+              <option value="Sasti Masti">Sasti Masti</option>
+              <option value="Middle Class Luxury">Middle Class Luxury</option>
+              <option value="Ameeri Wali Feeling">Ameeri Wali Feeling</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-caption font-label-md mb-1">Promo Badge</label>
+            <input type="text" name="badge" class="form-input-luxury" placeholder="e.g. Hot Deal, Best Seller">
+          </div>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Short Description</label>
+          <textarea name="description" required rows="2" class="form-input-luxury" placeholder="Brief deal selling points..."></textarea>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Witty Kanpuriya Fact</label>
+          <input type="text" name="fact" required class="form-input-luxury" placeholder="e.g. Paris vibes but cheaper than civil lines.">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Image URL</label>
+          <input type="url" name="imageUrl" class="form-input-luxury" placeholder="Image web link">
+        </div>
+        <button type="submit" class="w-full py-3 bg-secondary text-on-secondary font-label-md rounded-lg hover:opacity-90 transition-opacity">
+          Add New Deal
+        </button>
+      </form>
+
+      <!-- Tab Story Form (Hidden) -->
+      <form id="form-add-story" class="tab-content hidden space-y-4">
+        <div>
+          <label class="block text-caption font-label-md mb-1">Traveller Name</label>
+          <input type="text" name="name" required class="form-input-luxury" placeholder="e.g. Golu From Lucknow">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Witty Narrative/Review quote</label>
+          <textarea name="quote" required rows="3" class="form-input-luxury" placeholder="Write the funny experience here..."></textarea>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Star Rating (1-5)</label>
+          <input type="number" name="stars" required min="1" max="5" value="5" class="form-input-luxury">
+        </div>
+        <button type="submit" class="w-full py-3 bg-secondary text-on-secondary font-label-md rounded-lg hover:opacity-90 transition-opacity">
+          Add Story to Marquee
+        </button>
+      </form>
+
+      <!-- Tab Review Form (Hidden) -->
+      <form id="form-add-review" class="tab-content hidden space-y-4">
+        <div>
+          <label class="block text-caption font-label-md mb-1">Select Destination</label>
+          <select id="review-dest-select" name="destId" class="form-input-luxury">
+            <!-- Loaded dynamically -->
+          </select>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Your Name</label>
+          <input type="text" name="name" required class="form-input-luxury" placeholder="Your name">
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Star Rating</label>
+          <select name="rating" class="form-input-luxury">
+            <option value="5">⭐⭐⭐⭐⭐ (Perfect)</option>
+            <option value="4">⭐⭐⭐⭐ (Great)</option>
+            <option value="3">⭐⭐⭐ (Average)</option>
+            <option value="2">⭐⭐ (Needs Jugaad)</option>
+            <option value="1">⭐ (Oye Hoye)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-caption font-label-md mb-1">Review comment</label>
+          <textarea name="comment" required rows="2" class="form-input-luxury" placeholder="What was your experience?"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 bg-secondary text-on-secondary font-label-md rounded-lg hover:opacity-90 transition-opacity">
+          Submit Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
